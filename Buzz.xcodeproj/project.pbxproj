@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		425875E12C67AE1000F5A27D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425875E02C67AE1000F5A27D /* AppDelegate.swift */; };
 		425875E32C67AE1000F5A27D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425875E22C67AE1000F5A27D /* SceneDelegate.swift */; };
-		425875E52C67AE1000F5A27D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425875E42C67AE1000F5A27D /* ViewController.swift */; };
+		425875E52C67AE1000F5A27D /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425875E42C67AE1000F5A27D /* NewsListViewController.swift */; };
 		425875EA2C67AE1300F5A27D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425875E92C67AE1300F5A27D /* Assets.xcassets */; };
 		425875ED2C67AE1300F5A27D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 425875EC2C67AE1300F5A27D /* Base */; };
+		425875F72C67B21F00F5A27D /* NewsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425875F62C67B21F00F5A27D /* NewsListRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		425875DD2C67AE1000F5A27D /* Buzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		425875E02C67AE1000F5A27D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		425875E22C67AE1000F5A27D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		425875E42C67AE1000F5A27D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		425875E42C67AE1000F5A27D /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		425875E92C67AE1300F5A27D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		425875EC2C67AE1300F5A27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		425875EE2C67AE1300F5A27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		425875F62C67B21F00F5A27D /* NewsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		425875DF2C67AE1000F5A27D /* Buzz */ = {
 			isa = PBXGroup;
 			children = (
+				425875F42C67B08F00F5A27D /* Scenes */,
 				425875E02C67AE1000F5A27D /* AppDelegate.swift */,
 				425875E22C67AE1000F5A27D /* SceneDelegate.swift */,
-				425875E42C67AE1000F5A27D /* ViewController.swift */,
 				425875E92C67AE1300F5A27D /* Assets.xcassets */,
 				425875EB2C67AE1300F5A27D /* LaunchScreen.storyboard */,
 				425875EE2C67AE1300F5A27D /* Info.plist */,
 			);
 			path = Buzz;
+			sourceTree = "<group>";
+		};
+		425875F42C67B08F00F5A27D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				425875F52C67B0A400F5A27D /* NewsList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		425875F52C67B0A400F5A27D /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				425875E42C67AE1000F5A27D /* NewsListViewController.swift */,
+				425875F62C67B21F00F5A27D /* NewsListRouter.swift */,
+			);
+			path = NewsList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				425875E52C67AE1000F5A27D /* ViewController.swift in Sources */,
+				425875E52C67AE1000F5A27D /* NewsListViewController.swift in Sources */,
+				425875F72C67B21F00F5A27D /* NewsListRouter.swift in Sources */,
 				425875E12C67AE1000F5A27D /* AppDelegate.swift in Sources */,
 				425875E32C67AE1000F5A27D /* SceneDelegate.swift in Sources */,
 			);
