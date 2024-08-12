@@ -7,8 +7,15 @@
 
 import UIKit
 
+protocol NewListDisplayLogic: AnyObject {
+    func displayFetchedNews(viewModel: NewsListModel.FetchNews.ViewModel)
+    func displayError(message: String)
+}
+
 class NewsListViewController: UIViewController {
-    private let interactor = NewsListInteractor()
+    
+    var interactor: NewsListBusinessLogic?
+    var articles: [NewsListModel.FetchNews.ViewModel.DisplayedArticle] = []
     
     private lazy var newsListTableView: UITableView = {
        let tableView = UITableView()
@@ -22,12 +29,25 @@ class NewsListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .red
-        interactor.loadNews(request: NewsListModel.FetchNews.Request())
-        
+        getNews()
         addSubviews()
         setupConstraints()
+        setup()
+    }
+    
+    private func setup() {
+        let viewController = self
+        let interactor = NewsListInteractor()
+        let presenter = NewsListPresenter()
         
+        viewController.interactor = interactor
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+    }
+    
+    
+    private func getNews() {
+        interactor?.loadNews(request: NewsListModel.FetchNews.Request())
     }
     
     private func addSubviews() {
@@ -50,12 +70,27 @@ extension NewsListViewController: UITableViewDelegate {}
 
 extension NewsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return articles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "Noticia"
+        cell.textLabel?.text = articles[indexPath.row].title
         return cell
     }
+}
+
+extension NewsListViewController: NewListDisplayLogic {
+    func displayFetchedNews(viewModel: NewsListModel.FetchNews.ViewModel) {
+        self.articles = viewModel.displayedArticles
+        newsListTableView.reloadData()
+    }
+    
+    func displayError(message: String) {
+        let alert = UIAlertController(title: "Erro!", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alert, animated: true)
+    }
+    
+    
 }

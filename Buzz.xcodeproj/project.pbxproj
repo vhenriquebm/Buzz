@@ -19,6 +19,7 @@
 		425876022C6A332900F5A27D /* NewsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425876012C6A332900F5A27D /* NewsListInteractor.swift */; };
 		425876042C6A36E500F5A27D /* NewsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425876032C6A36E500F5A27D /* NewsListModel.swift */; };
 		4258760A2C6AC30A00F5A27D /* NewsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425876092C6AC30A00F5A27D /* NewsListPresenter.swift */; };
+		4258760C2C6ACD4200F5A27D /* NewsListArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4258760B2C6ACD4200F5A27D /* NewsListArticleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		425876012C6A332900F5A27D /* NewsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListInteractor.swift; sourceTree = "<group>"; };
 		425876032C6A36E500F5A27D /* NewsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListModel.swift; sourceTree = "<group>"; };
 		425876092C6AC30A00F5A27D /* NewsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenter.swift; sourceTree = "<group>"; };
+		4258760B2C6ACD4200F5A27D /* NewsListArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListArticleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				425875E42C67AE1000F5A27D /* NewsListViewController.swift */,
+				4258760B2C6ACD4200F5A27D /* NewsListArticleCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				425875F72C67B21F00F5A27D /* NewsListRouter.swift in Sources */,
 				425875E12C67AE1000F5A27D /* AppDelegate.swift in Sources */,
 				425875E32C67AE1000F5A27D /* SceneDelegate.swift in Sources */,
+				4258760C2C6ACD4200F5A27D /* NewsListArticleCell.swift in Sources */,
 				425876042C6A36E500F5A27D /* NewsListModel.swift in Sources */,
 				425876002C6A300D00F5A27D /* NewsApiWorker.swift in Sources */,
 				425876022C6A332900F5A27D /* NewsListInteractor.swift in Sources */,
