@@ -13,6 +13,10 @@
 		425875EA2C67AE1300F5A27D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425875E92C67AE1300F5A27D /* Assets.xcassets */; };
 		425875ED2C67AE1300F5A27D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 425875EC2C67AE1300F5A27D /* Base */; };
 		425875F72C67B21F00F5A27D /* NewsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425875F62C67B21F00F5A27D /* NewsListRouter.swift */; };
+		425875FA2C6A2B2400F5A27D /* URLSessionNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425875F92C6A2B2400F5A27D /* URLSessionNetworking.swift */; };
+		425875FD2C6A2F1C00F5A27D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425875FC2C6A2F1C00F5A27D /* Article.swift */; };
+		425876002C6A300D00F5A27D /* NewsApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425875FF2C6A300D00F5A27D /* NewsApiWorker.swift */; };
+		425876022C6A332900F5A27D /* NewsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425876012C6A332900F5A27D /* NewsListInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		425875EC2C67AE1300F5A27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		425875EE2C67AE1300F5A27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		425875F62C67B21F00F5A27D /* NewsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListRouter.swift; sourceTree = "<group>"; };
+		425875F92C6A2B2400F5A27D /* URLSessionNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworking.swift; sourceTree = "<group>"; };
+		425875FC2C6A2F1C00F5A27D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		425875FF2C6A300D00F5A27D /* NewsApiWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiWorker.swift; sourceTree = "<group>"; };
+		425876012C6A332900F5A27D /* NewsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,9 @@
 		425875DF2C67AE1000F5A27D /* Buzz */ = {
 			isa = PBXGroup;
 			children = (
+				425875FE2C6A2FEA00F5A27D /* Workers */,
+				425875FB2C6A2F1200F5A27D /* Model */,
+				425875F82C6A2B0600F5A27D /* Service */,
 				425875F42C67B08F00F5A27D /* Scenes */,
 				425875E02C67AE1000F5A27D /* AppDelegate.swift */,
 				425875E22C67AE1000F5A27D /* SceneDelegate.swift */,
@@ -79,8 +90,33 @@
 			children = (
 				425875E42C67AE1000F5A27D /* NewsListViewController.swift */,
 				425875F62C67B21F00F5A27D /* NewsListRouter.swift */,
+				425876012C6A332900F5A27D /* NewsListInteractor.swift */,
 			);
 			path = NewsList;
+			sourceTree = "<group>";
+		};
+		425875F82C6A2B0600F5A27D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				425875F92C6A2B2400F5A27D /* URLSessionNetworking.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		425875FB2C6A2F1200F5A27D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				425875FC2C6A2F1C00F5A27D /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		425875FE2C6A2FEA00F5A27D /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				425875FF2C6A300D00F5A27D /* NewsApiWorker.swift */,
+			);
+			path = Workers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,10 +189,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				425875FA2C6A2B2400F5A27D /* URLSessionNetworking.swift in Sources */,
 				425875E52C67AE1000F5A27D /* NewsListViewController.swift in Sources */,
+				425875FD2C6A2F1C00F5A27D /* Article.swift in Sources */,
 				425875F72C67B21F00F5A27D /* NewsListRouter.swift in Sources */,
 				425875E12C67AE1000F5A27D /* AppDelegate.swift in Sources */,
 				425875E32C67AE1000F5A27D /* SceneDelegate.swift in Sources */,
+				425876002C6A300D00F5A27D /* NewsApiWorker.swift in Sources */,
+				425876022C6A332900F5A27D /* NewsListInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
